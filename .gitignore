@@ -1,0 +1,16 @@
+# Node / Express (backend)
+server/node_modules/
+server/.env
+/node_modules
+
+# React (frontend)
+client/node_modules/
+client/build/
+
+# Logs
+logs
+*.log
+
+# OS or editor junk
+.DS_Store
+.vscode/

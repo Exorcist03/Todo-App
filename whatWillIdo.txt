@@ -1,0 +1,14 @@
+things to do
+
+- one page for signup and login
+- after signing up or loggin in land to a page where in the left add todo button and in the right all the todos will be rendered along with a button which will help me mark them completed 
+- if completed green if not red  
+
+
+WORKFLOW
+- write backend of authentications of signin and login
+- write a get request to get all the todos from the database 
+- store the users info in the database 
+
+- make the login page and connect the frontend to bacend using axios, also store them to the database
+- then on the landing page after login/signup, on the leftside i will have a form that asks the details of todo and on submit the right side gets updated with the done todo

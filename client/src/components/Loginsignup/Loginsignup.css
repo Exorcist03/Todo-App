@@ -1,0 +1,138 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+   Reset & Base
+───────────────────────────────────────────────────────────────────────────── */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background: linear-gradient(135deg, #4e5d6c 0%, #2b2f3a 100%);
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  /*  */
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Login Container
+───────────────────────────────────────────────────────────────────────────── */
+.login {
+  width: 100%;
+  max-width: 420px;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;      /* center children horizontally */
+  justify-content: center;  /* center children vertically */
+  gap: 1.5rem;
+  box-sizing: border-box;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Title (if you have one)
+───────────────────────────────────────────────────────────────────────────── */
+.login h1 {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 0.5px;
+  color: #2b2f3a;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Form Box & Fields
+───────────────────────────────────────────────────────────────────────────── */
+.box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* center inputs & button */
+  gap: 1rem;
+}
+
+.box input {
+  width: 100%;
+  max-width: 300px;       /* consistent width */
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.box input:focus {
+  border-color: #4e5d6c;
+  box-shadow: 0 0 0 3px rgba(78, 93, 108, 0.2);
+  outline: none;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Primary Button
+───────────────────────────────────────────────────────────────────────────── */
+.box button {
+  width: 100%;
+  max-width: 300px;      /* match inputs */
+  padding: 0.85rem;
+  background: #4e5d6c;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.box button:hover {
+  background: #3d4a57;
+}
+
+.box button:active {
+  transform: translateY(1px);
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Toggle Link / Choice Text
+───────────────────────────────────────────────────────────────────────────── */
+.choice {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.choice span {
+  color: #4e5d6c;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.choice span:hover {
+  color: #3d4a57;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Responsive Tweaks
+───────────────────────────────────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .login {
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+
+  .login h1 {
+    font-size: 1.5rem;
+  }
+
+  .box input,
+  .box button {
+    max-width: 100%;
+    padding: 0.65rem;
+  }
+}
