@@ -11,7 +11,7 @@ const Landingpage =  () => {
   useEffect( ()=> {
    const updatetodo =  async () => {
       try{
-        const resp = await axios.get("http://localhost:3000/gettodo", {headers:{"auth-token" : localStorage.getItem('auth-token')}});
+        const resp = await axios.get("https://todo-app-wmel.onrender.com/gettodo", {headers:{"auth-token" : localStorage.getItem('auth-token')}});
         // console.log(resp.data);
         settodos(resp.data);
       }  
@@ -27,7 +27,7 @@ const addTodo = async () => {
   console.log(title, desc);
   // add this to this users todo arry and then fetch it and display it on screen
   try{
-    await axios.post("http://localhost:3000/addtodo", {title: title, description: desc}, {
+    await axios.post("https://todo-app-wmel.onrender.com/addtodo", {title: title, description: desc}, {
       headers: {
         "auth-token": localStorage.getItem("auth-token")
       }
@@ -42,7 +42,7 @@ const addTodo = async () => {
 
 const markdone = async (idx) => {
   try {
-      await axios.post("http://localhost:3000/update", {idx}, {headers : {
+      await axios.post("https://todo-app-wmel.onrender.com/update", {idx}, {headers : {
       "auth-token": localStorage.getItem('auth-token')
     }});
   } 
