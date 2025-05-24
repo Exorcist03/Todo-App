@@ -20,7 +20,7 @@ const changeHandler = (e) => {
 const login = async () => {
   console.log("login func triggered");
   try {
-    let resp = await axios.post("http://localhost:3000/signin", {email: formdata.email, password: formdata.password});
+    let resp = await axios.post("https://todo-app-wmel.onrender.com/signin", {email: formdata.email, password: formdata.password});
     if(resp.data.success) {
       localStorage.setItem('auth-token', resp.data.token);
       // window.location.replace('/land');
@@ -36,7 +36,7 @@ const login = async () => {
 const signupfun = async () => {
   console.log("signup func triggered");
   try {
-      let resp = await axios.post('http://localhost:3000/signup', {username: formdata.username, email: formdata.email, password: formdata.password});
+      let resp = await axios.post('https://todo-app-wmel.onrender.com/signup', {username: formdata.username, email: formdata.email, password: formdata.password});
       if(resp.data.success) {
       localStorage.setItem('auth-token', resp.data.token);
       // console.log("auth token stored is ", );
